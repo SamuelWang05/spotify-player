@@ -109,41 +109,42 @@
     padding:0 6vw;
   }
   #art{
-    flex:0 0 auto; width:min(40vh, 38vw); height:min(40vh, 38vw);
-    border-radius:22px; background-size:cover; background-position:center;
-    box-shadow:0 20px 60px rgba(0,0,0,.5);
+    flex:0 0 auto; width:clamp(200px, 58vh, 440px); height:clamp(200px, 58vh, 440px);
+    border-radius:26px; background-size:cover; background-position:center;
+    box-shadow:0 24px 70px rgba(0,0,0,.5);
     background-color:#1a1a1a;
   }
   #meta-col{
-    flex:1 1 auto; max-width:46vw; min-width:220px;
-    display:flex; flex-direction:column;
+    flex:0 1 auto; width:min(48vw, 560px);
+    display:flex; flex-direction:column; align-items:center;
   }
   #topicons{
-    display:flex; justify-content:flex-end; gap:14px; margin-bottom:min(6vh,44px);
+    display:flex; justify-content:flex-end; gap:16px; margin-bottom:clamp(24px,6vh,54px);
+    width:100%;
   }
   .icon-btn{
-    width:40px; height:40px; border-radius:50%; border:none;
+    width:48px; height:48px; border-radius:50%; border:none;
     background:rgba(255,255,255,0.16); color:#fff;
     display:flex; align-items:center; justify-content:center; cursor:pointer;
   }
   .icon-btn.active{ background:rgba(255,255,255,0.32); }
-  .icon-btn svg{ width:19px; height:19px; }
+  .icon-btn svg{ width:22px; height:22px; }
 
-  #title{ font-size:clamp(20px,3.4vh,30px); font-weight:700; letter-spacing:-.01em; line-height:1.15;
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-  #artist{ font-size:clamp(14px,2.1vh,18px); color:var(--fg-dim); margin-top:4px;
-    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  #title{ font-size:clamp(26px,5.4vh,44px); font-weight:700; letter-spacing:-.01em; line-height:1.15;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:center; width:100%; }
+  #artist{ font-size:clamp(17px,3.2vh,24px); color:var(--fg-dim); margin-top:6px;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:center; width:100%; }
 
-  #controls{ display:flex; align-items:center; gap:0; margin-top:min(5vh,38px); }
+  #controls{ display:flex; align-items:center; justify-content:center; gap:0; margin-top:clamp(28px,6vh,50px); width:100%; }
   .ctl{
     background:none; border:none; color:#fff; cursor:pointer;
     display:flex; align-items:center; justify-content:center;
-    padding:10px 22px;
+    padding:12px 26px;
   }
-  .ctl svg{ width:26px; height:26px; }
-  #playpause svg{ width:32px; height:32px; }
+  .ctl svg{ width:30px; height:30px; }
+  #playpause svg{ width:38px; height:38px; }
 
-  #progress-wrap{ margin-top:min(5vh,36px); }
+  #progress-wrap{ margin-top:clamp(28px,6vh,48px); width:100%; }
   #bar{
     position:relative; height:4px; border-radius:2px; background:rgba(255,255,255,0.28);
     overflow:hidden; cursor:pointer;
